@@ -51,7 +51,6 @@ export default {
   modules: [
     "@nuxtjs/axios",
     "bootstrap-vue/nuxt",
-    "@nuxtjs/markdownit",
   ],
   axios: {},
   markdownit: {
