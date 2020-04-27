@@ -1,5 +1,10 @@
 require("dotenv").config();
 const { API_KEY } = process.env;
+
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+
 export default {
   mode: "spa",
   head: {
@@ -22,6 +27,10 @@ export default {
   modules: [],
   build: {
     analyze: true,
+    minimize:true,
+    minimizer: [
+      new TerserPlugin(),
+    ],
     extend(config, ctx) {}
   },
   modules: [
