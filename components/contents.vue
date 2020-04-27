@@ -8,7 +8,7 @@
         <p>{{contents.category}}</p>
       </div>
       <div class="contents-date">
-        <p>{{contents.createdAt | moment}}</p>
+        <p>{{formatDate(contents.createdAt)}}</p>
       </div>
     </div>
     <div class="contents-img">
@@ -18,13 +18,14 @@
   </div>
 </template>
 <script>
-import moment from "moment";
+import dayjs from 'dayjs';
+
 export default {
   props: ["contents"],
-  filters: {
-    moment: function(date) {
-      return moment(date).format("YYYY/MM/DD HH:mm");
-    }
+  methods: {
+    formatDate (date) {
+      return dayjs(date).format("YYYY/MM/DD HH:mm");
+    },
   }
 };
 </script>

@@ -14,10 +14,9 @@
     "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/markdownit": "^1.2.9",
-    "@nuxtjs/moment": "^1.6.0",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.9.0",
-    "moment": "^2.24.0",
+    "dayjs": "^1.8.25",
     "nuxt": "^2.11.0",
     "vue": "^2.6.11"
   },

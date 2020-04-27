@@ -6,7 +6,7 @@
         <p>{{article.category}}</p>
       </div>
       <div class="article-date">
-        <p>{{article.createdAt | moment}}</p>
+        <p>{{formatDate(article.createdAt)}}</p>
       </div>
     </div>
     <div class="article-contents-title">
@@ -16,13 +16,14 @@
 </template>
 
 <script>
-import moment from "moment";
+import dayjs from 'dayjs';
+
 export default {
   props: ["article"],
-  filters: {
-    moment: function(date) {
-      return moment(date).format("YYYY/MM/DD HH:mm");
-    }
+  methods: {
+    formatDate (date) {
+      return dayjs(date).format("YYYY/MM/DD HH:mm");
+    },
   }
 };
 </script>

@@ -45,13 +45,13 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    analyze: true,
     extend(config, ctx) {}
   },
   modules: [
     "@nuxtjs/axios",
     "bootstrap-vue/nuxt",
     "@nuxtjs/markdownit",
-    ["@nuxtjs/moment", ["ja"]]
   ],
   axios: {},
   markdownit: {
