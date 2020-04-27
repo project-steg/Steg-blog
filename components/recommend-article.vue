@@ -18,7 +18,7 @@
             <p>{{recommend.category}}</p>
           </div>
           <div class="recommend-article-date">
-            <p>{{recommend.createdAt | moment}}</p>
+            <p>{{formatDate(recommend.createdAt)}}</p>
           </div>
         </div>
         <div class="recommend-article-text" v-html="$md.render(recommend.contents)">
@@ -32,13 +32,14 @@
   </div>
 </template>
 <script>
-import moment from "moment";
+import dayjs from 'dayjs';
+
 export default {
   props: ["recommend"],
-  filters: {
-    moment: function(date) {
-      return moment(date).format("YYYY/MM/DD HH:mm");
-    }
+  methods: {
+    formatDate (date) {
+      return dayjs(date).format("YYYY/MM/DD HH:mm");
+    },
   }
 };
 </script>
