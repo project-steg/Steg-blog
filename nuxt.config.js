@@ -60,6 +60,13 @@ export default {
     linkify: true, // URLに似たテキストをリンクに自動変換する
     typography: true // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
   },
+  bootstrapVue: {
+    components: [
+      'BContainer',
+      'BRow',
+      'BCol',
+    ]
+  },
   generate: {
     fallback: true
   },
