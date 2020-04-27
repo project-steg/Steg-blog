@@ -41,6 +41,7 @@ export default {
 .contents-title p {
   font-size: 2rem;
   color: #282828;
+  font-display: swap;
   font-family: "M PLUS Rounded 1c", sans-serif;
   border-bottom: solid 2px #e0e0e0;
   margin-bottom: 10px;
